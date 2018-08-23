@@ -13,6 +13,7 @@
 		479421F6212EA50C00425A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479421F5212EA50C00425A37 /* Assets.xcassets */; };
 		479421F9212EA50C00425A37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479421F7212EA50C00425A37 /* LaunchScreen.storyboard */; };
 		47942201212EE44200425A37 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47942200212EE44200425A37 /* SearchResult.swift */; };
+		47F2EFB5212EF851008148FC /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F2EFB4212EF851008148FC /* SearchResultCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		479421F8212EA50C00425A37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		479421FA212EA50C00425A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47942200212EE44200425A37 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		47F2EFB4212EF851008148FC /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				479421EE212EA50C00425A37 /* AppDelegate.swift */,
 				479421F5212EA50C00425A37 /* Assets.xcassets */,
+				47F2EFB4212EF851008148FC /* SearchResultCell.xib */,
 				479421FA212EA50C00425A37 /* Info.plist */,
 				479421F7212EA50C00425A37 /* LaunchScreen.storyboard */,
 				479421F2212EA50C00425A37 /* Main.storyboard */,
@@ -127,6 +130,7 @@
 			files = (
 				479421F9212EA50C00425A37 /* LaunchScreen.storyboard in Resources */,
 				479421F6212EA50C00425A37 /* Assets.xcassets in Resources */,
+				47F2EFB5212EF851008148FC /* SearchResultCell.xib in Resources */,
 				479421F4212EA50C00425A37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
