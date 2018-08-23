@@ -10,14 +10,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="V3d-Ki-2DC">
+                                <rect key="frame" x="0.0" y="66" width="320" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="App name, artist, song, album, e-book" translatesAutoresizingMaskIntoConstraints="NO" id="Nq3-uy-S7f">
+                                <rect key="frame" x="0.0" y="20" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V3d-Ki-2DC" secondAttribute="trailing" id="FKE-lY-jqZ"/>
+                            <constraint firstItem="Nq3-uy-S7f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cbF-Y0-mXy"/>
+                            <constraint firstItem="Nq3-uy-S7f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gKg-M2-fML"/>
+                            <constraint firstItem="V3d-Ki-2DC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="k7S-X2-tvy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="V3d-Ki-2DC" secondAttribute="bottom" id="kx9-A5-cje"/>
+                            <constraint firstItem="Nq3-uy-S7f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wrg-Bv-x5D"/>
+                            <constraint firstItem="V3d-Ki-2DC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="wxo-Er-tdB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
