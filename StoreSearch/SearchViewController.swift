@@ -96,7 +96,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     //MARK: Private methods
     func iTunesURL(searchText: String) -> URL {
         let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = String(format: "https://itunes.apple.com/search?term=%@", encodedText)
+        let urlString = String(format: "https://NOMOREitunes.apple.com/search?term=%@", encodedText)
         let url = URL(string: urlString)
         return url!
     }
@@ -106,6 +106,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             return try Data(contentsOf: url)
         } catch {
             print("Download error: \(error.localizedDescription)")
+            showNetworkError()
             return nil
         }
     }
@@ -119,6 +120,13 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
             print("JSON Error: \(error)")
             return []
         }
+    }
+    
+    func showNetworkError() {
+        let alert = UIAlertController(title: "Whooops...", message: "There was an error accessing the iTunes Store." + " Please try again.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
 }
 
