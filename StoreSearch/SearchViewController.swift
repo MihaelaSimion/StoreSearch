@@ -18,14 +18,17 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         tableView.contentInset = UIEdgeInsets(top: 64, left: 0, bottom: 0, right: 0)
         tableView.rowHeight = 80
-        let cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
+        var cellNib = UINib(nibName: TableViewCellIdentifiers.searchResultCell, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "SearchResultCell")
+        cellNib = UINib(nibName: TableViewCellIdentifiers.nothingFoundcell, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.nothingFoundcell)
     }    
 }
 
 //MARK: Cell Identifiers
 struct TableViewCellIdentifiers {
     static let searchResultCell = "SearchResultCell"
+    static let nothingFoundcell = "NothingFoundCell"
 }
 
 //MARK: Search Bar Delegate
@@ -63,17 +66,15 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
-        
         if searchResults.count == 0 {
-            cell.nameLabel.text = "(Nothing found)"
-            cell.artistNameLabel.text = ""
+            return tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.nothingFoundcell, for: indexPath)
         } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
             let searchResult = searchResults[indexPath.row]
             cell.nameLabel.text = searchResult.name
             cell.artistNameLabel.text = searchResult.artistName
+            return cell
         }
-        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
