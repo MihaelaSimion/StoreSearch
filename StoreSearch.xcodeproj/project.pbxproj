@@ -64,14 +64,14 @@
 			children = (
 				479421EE212EA50C00425A37 /* AppDelegate.swift */,
 				479421F5212EA50C00425A37 /* Assets.xcassets */,
-				47F2EFB4212EF851008148FC /* SearchResultCell.xib */,
 				479421FA212EA50C00425A37 /* Info.plist */,
 				479421F7212EA50C00425A37 /* LaunchScreen.storyboard */,
 				479421F2212EA50C00425A37 /* Main.storyboard */,
-				47942200212EE44200425A37 /* SearchResult.swift */,
-				479421F0212EA50C00425A37 /* SearchViewController.swift */,
 				47F2EFB8212FF411008148FC /* NothingFoundCell.xib */,
+				47942200212EE44200425A37 /* SearchResult.swift */,
 				47F2EFB6212FE626008148FC /* SearchResultCell.swift */,
+				47F2EFB4212EF851008148FC /* SearchResultCell.xib */,
+				479421F0212EA50C00425A37 /* SearchViewController.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
