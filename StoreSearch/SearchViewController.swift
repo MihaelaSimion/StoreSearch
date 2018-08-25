@@ -45,6 +45,9 @@ extension SearchViewController: UISearchBarDelegate {
             print("URL: '\(url)'")
             if let data = performStoreRequest(with: url) {
                 searchResults = parse(data: data)
+                searchResults.sort { (result1, result2) -> Bool in
+                    return result1.name < result2.name
+                }
             }
             
             tableView.reloadData()
