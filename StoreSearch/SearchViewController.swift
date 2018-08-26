@@ -48,21 +48,18 @@ extension SearchViewController: UISearchBarDelegate {
             searchResults = []
             hasSearched = true
             
-            let queue = DispatchQueue.global()
-            let url = self.iTunesURL(searchText: searchBar.text!)
-            
-            queue.async {
-                if let data = self.performStoreRequest(with: url) {
-                    self.searchResults = self.parse(data: data)
-                    self.searchResults.sort { (result1, result2) -> Bool in
-                        return result1.name < result2.name
-                    }
-                    DispatchQueue.main.async {
-                        self.isLoading = false
-                        self.tableView.reloadData()
-                    }
+            let url = iTunesURL(searchText: searchBar.text!)
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: url) { (data, response, error) in
+                if let error = error {
+                    print("Failure! \(error)")
+                } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
+                    print("Success! \(data!)")
+                } else {
+                    print("Failure! \(response!)")
                 }
             }
+            dataTask.resume()
         }
     }
     
@@ -124,16 +121,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=50", encodedText)
         let url = URL(string: urlString)
         return url!
-    }
-    
-    func performStoreRequest(with url: URL) -> Data? {
-        do {
-            return try Data(contentsOf: url)
-        } catch {
-            print("Download error: \(error.localizedDescription)")
-            showNetworkError()
-            return nil
-        }
     }
     
     func parse(data: Data) -> [SearchResult] {
