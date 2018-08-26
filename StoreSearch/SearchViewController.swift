@@ -54,9 +54,26 @@ extension SearchViewController: UISearchBarDelegate {
                 if let error = error {
                     print("Failure! \(error)")
                 } else if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                    print("Success! \(data!)")
+                    if let data = data {
+                        self.searchResults = self.parse(data: data)
+                        self.searchResults.sort(by: { (result1, result2) -> Bool in
+                            return result1.name < result2.name
+                        })
+                        DispatchQueue.main.async {
+                            self.isLoading = false
+                            self.tableView.reloadData()
+                        }
+                        return
+                    }
                 } else {
                     print("Failure! \(response!)")
+                }
+                
+                DispatchQueue.main.async {
+                    self.hasSearched = false
+                    self.isLoading = false
+                    self.tableView.reloadData()
+                    self.showNetworkError()
                 }
             }
             dataTask.resume()
