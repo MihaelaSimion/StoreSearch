@@ -74,6 +74,7 @@
                         <outlet property="searchBar" destination="Nq3-uy-S7f" id="7S0-c4-2jn"/>
                         <outlet property="segmentedControl" destination="Qzi-zQ-NRx" id="vxF-e3-UYu"/>
                         <outlet property="tableView" destination="V3d-Ki-2DC" id="PA4-yt-OYC"/>
+                        <segue destination="D68-ad-xu6" kind="presentation" identifier="ShowDetail" id="mdo-d3-uAM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,20 +89,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-SN-huR" userLabel="Pop-up View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKn-SN-huR" userLabel="Pop-up View">
                                 <rect key="frame" x="40" y="164" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mh-la-3UZ" userLabel="Close button">
                                         <rect key="frame" x="4" y="2" width="15" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="CloseButton"/>
+                                        <connections>
+                                            <action selector="close" destination="D68-ad-xu6" eventType="touchUpInside" id="ubS-8t-AVY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.953125" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="85e-fv-hO4"/>
+                                    <constraint firstAttribute="width" constant="240" id="UbL-xZ-DoV"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XKn-SN-huR" firstAttribute="centerY" secondItem="ng9-va-Gbp" secondAttribute="centerY" id="Wm2-VP-N9I"/>
+                            <constraint firstItem="XKn-SN-huR" firstAttribute="centerX" secondItem="ng9-va-Gbp" secondAttribute="centerX" id="yV2-6p-3gu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fSh-EC-w61"/>
                     </view>
                 </viewController>
