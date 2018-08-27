@@ -18,6 +18,13 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    //MARK: Cell Identifiers
+    struct TableViewCellIdentifiers {
+        static let searchResultCell = "SearchResultCell"
+        static let nothingFoundcell = "NothingFoundCell"
+        static let loadingCell = "LoadingCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.becomeFirstResponder()
@@ -35,13 +42,50 @@ class SearchViewController: UIViewController {
         performSearch()
     }
     
-}
-
-//MARK: Cell Identifiers
-struct TableViewCellIdentifiers {
-    static let searchResultCell = "SearchResultCell"
-    static let nothingFoundcell = "NothingFoundCell"
-    static let loadingCell = "LoadingCell"
+    //MARK: Private methods
+    func iTunesURL(searchText: String, category: Int) -> URL {
+        let kind: String
+        switch category {
+        case 1: kind = "musicTrack"
+        case 2: kind = "software"
+        case 3: kind = "ebook"
+        default: kind = ""
+        }
+        
+        let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        let urlString = "https://itunes.apple.com/search?" + "term=\(encodedText)&limit=200&entity=\(kind)"
+        
+        let url = URL(string: urlString)
+        return url!
+    }
+    
+    func parse(data: Data) -> [SearchResult] {
+        do {
+            let jsonDecoder = JSONDecoder()
+            let result = try jsonDecoder.decode(ResultArray.self, from: data)
+            return result.results
+        } catch {
+            print("JSON Error: \(error)")
+            return []
+        }
+    }
+    
+    func showNetworkError() {
+        let alert = UIAlertController(title: "Whooops...", message: "There was an error accessing the iTunes Store." + " Please try again.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let detailViewController = segue.destination as! DetailViewController
+            let indexPath = sender as! IndexPath
+            let searchResult = searchResults[indexPath.row]
+            detailViewController.searchResult = searchResult
+        }
+    }
 }
 
 //MARK: Search Bar Delegate
@@ -136,41 +180,6 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             return indexPath
         }
-    }
-    
-    //MARK: Private methods
-    func iTunesURL(searchText: String, category: Int) -> URL {
-        let kind: String
-        switch category {
-        case 1: kind = "musicTrack"
-        case 2: kind = "software"
-        case 3: kind = "ebook"
-        default: kind = ""
-        }
-        
-        let encodedText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
-        let urlString = "https://itunes.apple.com/search?" + "term=\(encodedText)&limit=200&entity=\(kind)"
-        
-        let url = URL(string: urlString)
-        return url!
-    }
-    
-    func parse(data: Data) -> [SearchResult] {
-        do {
-            let jsonDecoder = JSONDecoder()
-            let result = try jsonDecoder.decode(ResultArray.self, from: data)
-            return result.results
-        } catch {
-            print("JSON Error: \(error)")
-            return []
-        }
-    }
-    
-    func showNetworkError() {
-        let alert = UIAlertController(title: "Whooops...", message: "There was an error accessing the iTunes Store." + " Please try again.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        present(alert, animated: true, completion: nil)
     }
 }
 
