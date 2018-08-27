@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		475974382131722B002F9AC5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475974372131722B002F9AC5 /* LoadingCell.xib */; };
+		475BD66F2133F2150087839B /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */; };
 		479421EF212EA50C00425A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479421EE212EA50C00425A37 /* AppDelegate.swift */; };
 		479421F1212EA50C00425A37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479421F0212EA50C00425A37 /* SearchViewController.swift */; };
 		479421F4212EA50C00425A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479421F2212EA50C00425A37 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		475974372131722B002F9AC5 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		479421EB212EA50C00425A37 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479421EE212EA50C00425A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479421F0212EA50C00425A37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				47F2EFB6212FE626008148FC /* SearchResultCell.swift */,
 				47F2EFB4212EF851008148FC /* SearchResultCell.xib */,
 				479421F0212EA50C00425A37 /* SearchViewController.swift */,
+				475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				47942201212EE44200425A37 /* SearchResult.swift in Sources */,
 				47F2EFB7212FE626008148FC /* SearchResultCell.swift in Sources */,
 				479421EF212EA50C00425A37 /* AppDelegate.swift in Sources */,
+				475BD66F2133F2150087839B /* UIImageView+DownloadImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
