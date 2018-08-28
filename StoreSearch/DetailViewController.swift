@@ -41,7 +41,7 @@ class DetailViewController: UIViewController {
         modalPresentationStyle = .custom
         transitioningDelegate = self
     }
-    
+     
     deinit {
         print("deinit \(self)")
         downloadTask?.cancel()
