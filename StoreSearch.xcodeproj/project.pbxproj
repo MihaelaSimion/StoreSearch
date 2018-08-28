@@ -11,6 +11,7 @@
 		475BD66F2133F2150087839B /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */; };
 		475BD671213413B80087839B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD670213413B80087839B /* DetailViewController.swift */; };
 		475BD6732134197E0087839B /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD6722134197E0087839B /* DimmingPresentationController.swift */; };
+		475BD6792135448D0087839B /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD6782135448D0087839B /* LandscapeViewController.swift */; };
 		479421EF212EA50C00425A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479421EE212EA50C00425A37 /* AppDelegate.swift */; };
 		479421F1212EA50C00425A37 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479421F0212EA50C00425A37 /* SearchViewController.swift */; };
 		479421F4212EA50C00425A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479421F2212EA50C00425A37 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		475BD670213413B80087839B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		475BD6722134197E0087839B /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
+		475BD6782135448D0087839B /* LandscapeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
 		479421EB212EA50C00425A37 /* StoreSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		479421EE212EA50C00425A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		479421F0212EA50C00425A37 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				479421EE212EA50C00425A37 /* AppDelegate.swift */,
 				479421F5212EA50C00425A37 /* Assets.xcassets */,
 				475BD670213413B80087839B /* DetailViewController.swift */,
+				475BD6782135448D0087839B /* LandscapeViewController.swift */,
 				479421FA212EA50C00425A37 /* Info.plist */,
 				475974372131722B002F9AC5 /* LoadingCell.xib */,
 				479421F2212EA50C00425A37 /* Main.storyboard */,
@@ -160,6 +163,7 @@
 			files = (
 				479421F1212EA50C00425A37 /* SearchViewController.swift in Sources */,
 				475BD6732134197E0087839B /* DimmingPresentationController.swift in Sources */,
+				475BD6792135448D0087839B /* LandscapeViewController.swift in Sources */,
 				47942201212EE44200425A37 /* SearchResult.swift in Sources */,
 				47F2EFB7212FE626008148FC /* SearchResultCell.swift in Sources */,
 				475BD671213413B80087839B /* DetailViewController.swift in Sources */,
