@@ -88,6 +88,9 @@ class SearchViewController: UIViewController {
                 controller.view.removeFromSuperview()
                 controller.removeFromParentViewController()
                 self.landscapeVC = nil
+                if self.presentedViewController != nil {
+                    self.dismiss(animated: true, completion: nil)
+                }
             }
         }
     }
