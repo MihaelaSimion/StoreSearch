@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4711165B2136779A00878A64 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711165A2136779A00878A64 /* Search.swift */; };
 		475974382131722B002F9AC5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475974372131722B002F9AC5 /* LoadingCell.xib */; };
 		475BD66F2133F2150087839B /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */; };
 		475BD671213413B80087839B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD670213413B80087839B /* DetailViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4711165A2136779A00878A64 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		475974372131722B002F9AC5 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		475BD670213413B80087839B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				47F2EFB6212FE626008148FC /* SearchResultCell.swift */,
 				47F2EFB4212EF851008148FC /* SearchResultCell.xib */,
 				479421F0212EA50C00425A37 /* SearchViewController.swift */,
+				4711165A2136779A00878A64 /* Search.swift */,
 				475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
@@ -161,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4711165B2136779A00878A64 /* Search.swift in Sources */,
 				479421F1212EA50C00425A37 /* SearchViewController.swift in Sources */,
 				475BD6732134197E0087839B /* DimmingPresentationController.swift in Sources */,
 				475BD6792135448D0087839B /* LandscapeViewController.swift in Sources */,
