@@ -34,9 +34,7 @@ class LandscapeViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        
         scrollView.frame = view.bounds
-        
         pageControl.frame = CGRect(x: 0, y: view.frame.size.height - pageControl.frame.size.height, width: view.frame.size.width, height: pageControl.frame.size.height)
         
         if firstTime {
@@ -46,7 +44,7 @@ class LandscapeViewController: UIViewController {
             case .notSearchedYet:
                 break
             case .loading:
-                break
+                showSpinner()
             case .noResults:
                 break
             case .results(let list):
@@ -143,6 +141,30 @@ class LandscapeViewController: UIViewController {
             downloads.append(task)
         }
     }
+        
+        private func showSpinner() {
+            let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            spinner.center = CGPoint(x: scrollView.bounds.midX + 0.5, y: scrollView.bounds.midY + 0.5)
+            spinner.tag = 1000
+            view.addSubview(spinner)
+            spinner.startAnimating()
+        }
+    
+    //MARK: Public methods
+    func searchResultsReceived() {
+        hideSpinner()
+        
+        switch search.state {
+        case .notSearchedYet, .loading, .noResults:
+            break
+        case .results(let list):
+            tileButtons(list)
+        }
+    }
+    
+    private func hideSpinner() {
+        view.viewWithTag(1000)?.removeFromSuperview()
+    }
     
     //MARK: Actions
     
@@ -161,6 +183,3 @@ extension LandscapeViewController: UIScrollViewDelegate {
         pageControl.currentPage = page
     }
 }
-
-
-
