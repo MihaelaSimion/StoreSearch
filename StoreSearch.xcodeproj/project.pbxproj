@@ -11,6 +11,7 @@
 		4711165E2137DD3200878A64 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471116602137DD3200878A64 /* NothingFoundCell.xib */; };
 		471116622137E09F00878A64 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471116642137E09F00878A64 /* LoadingCell.xib */; };
 		471116692137E46500878A64 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4711166B2137E46500878A64 /* SearchResultCell.xib */; };
+		4711166E2137EA9600878A64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 471116702137EA9600878A64 /* Localizable.strings */; };
 		475BD66F2133F2150087839B /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */; };
 		475BD671213413B80087839B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD670213413B80087839B /* DetailViewController.swift */; };
 		475BD6732134197E0087839B /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD6722134197E0087839B /* DimmingPresentationController.swift */; };
@@ -31,6 +32,8 @@
 		471116662137E0E400878A64 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
 		471116682137E2C100878A64 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
 		4711166A2137E46500878A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
+		4711166F2137EA9600878A64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		471116712137EBC100878A64 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		475BD670213413B80087839B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		475BD6722134197E0087839B /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
@@ -78,17 +81,18 @@
 				479421EE212EA50C00425A37 /* AppDelegate.swift */,
 				479421F5212EA50C00425A37 /* Assets.xcassets */,
 				475BD670213413B80087839B /* DetailViewController.swift */,
-				475BD6782135448D0087839B /* LandscapeViewController.swift */,
-				479421FA212EA50C00425A37 /* Info.plist */,
-				471116642137E09F00878A64 /* LoadingCell.xib */,
-				479421F2212EA50C00425A37 /* Main.storyboard */,
 				475BD6722134197E0087839B /* DimmingPresentationController.swift */,
+				479421FA212EA50C00425A37 /* Info.plist */,
+				475BD6782135448D0087839B /* LandscapeViewController.swift */,
+				471116642137E09F00878A64 /* LoadingCell.xib */,
+				471116702137EA9600878A64 /* Localizable.strings */,
+				479421F2212EA50C00425A37 /* Main.storyboard */,
 				471116602137DD3200878A64 /* NothingFoundCell.xib */,
+				4711165A2136779A00878A64 /* Search.swift */,
 				47942200212EE44200425A37 /* SearchResult.swift */,
 				47F2EFB6212FE626008148FC /* SearchResultCell.swift */,
 				4711166B2137E46500878A64 /* SearchResultCell.xib */,
 				479421F0212EA50C00425A37 /* SearchViewController.swift */,
-				4711165A2136779A00878A64 /* Search.swift */,
 				475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */,
 			);
 			path = StoreSearch;
@@ -154,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				479421F6212EA50C00425A37 /* Assets.xcassets in Resources */,
+				4711166E2137EA9600878A64 /* Localizable.strings in Resources */,
 				471116622137E09F00878A64 /* LoadingCell.xib in Resources */,
 				471116692137E46500878A64 /* SearchResultCell.xib in Resources */,
 				4711165E2137DD3200878A64 /* NothingFoundCell.xib in Resources */,
@@ -207,6 +212,15 @@
 				4711166A2137E46500878A64 /* Base */,
 			);
 			name = SearchResultCell.xib;
+			sourceTree = "<group>";
+		};
+		471116702137EA9600878A64 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4711166F2137EA9600878A64 /* en */,
+				471116712137EBC100878A64 /* nl */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 		479421F2212EA50C00425A37 /* Main.storyboard */ = {
