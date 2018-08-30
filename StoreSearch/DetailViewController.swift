@@ -104,9 +104,16 @@ class DetailViewController: UIViewController {
             downloadTask = artworkImageView.loadImage(url: largeURL)
         }
         
-        popupView.isHidden = false
+        UIView.animate(withDuration: 0.5, animations: {
+            self.popupView.isHidden = false
+            let scaleTransform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            self.popupView.transform = scaleTransform
+        }) { _ in
+            UIView.animate(withDuration: 0.5, animations: {
+                self.popupView.transform = CGAffineTransform.identity
+            })
+        }
     }
-
 }
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
