@@ -143,14 +143,14 @@ class LandscapeViewController: UIViewController {
             downloads.append(task)
         }
     }
-        
-        private func showSpinner() {
-            let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-            spinner.center = CGPoint(x: scrollView.bounds.midX + 0.5, y: scrollView.bounds.midY + 0.5)
-            spinner.tag = 1000
-            view.addSubview(spinner)
-            spinner.startAnimating()
-        }
+    
+    private func showSpinner() {
+        let spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        spinner.center = CGPoint(x: scrollView.bounds.midX + 0.5, y: scrollView.bounds.midY + 0.5)
+        spinner.tag = 1000
+        view.addSubview(spinner)
+        spinner.startAnimating()
+    }
     
     private func showNothingFoundLabel() {
         let label = UILabel(frame: CGRect.zero)
@@ -204,6 +204,7 @@ class LandscapeViewController: UIViewController {
         if segue.identifier == "ShowDetail" {
             if case .results(let list) = search.state {
                 let detailViewController = segue.destination as! DetailViewController
+                detailViewController.isPopUp = true
                 let searchResult = list[(sender as! UIButton).tag - 2000]
                 detailViewController.searchResult = searchResult
             }

@@ -5,3 +5,5 @@
   Created by Mihaela Simion on 8/30/18.
   Copyright © 2018 Mihaela Simion. All rights reserved.
 */
+
+CFBundleDisplayName = "StoreSearch";
