@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4711165B2136779A00878A64 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711165A2136779A00878A64 /* Search.swift */; };
-		475974382131722B002F9AC5 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 475974372131722B002F9AC5 /* LoadingCell.xib */; };
+		4711165E2137DD3200878A64 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471116602137DD3200878A64 /* NothingFoundCell.xib */; };
+		471116622137E09F00878A64 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471116642137E09F00878A64 /* LoadingCell.xib */; };
+		471116692137E46500878A64 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4711166B2137E46500878A64 /* SearchResultCell.xib */; };
 		475BD66F2133F2150087839B /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */; };
 		475BD671213413B80087839B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD670213413B80087839B /* DetailViewController.swift */; };
 		475BD6732134197E0087839B /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475BD6722134197E0087839B /* DimmingPresentationController.swift */; };
@@ -18,14 +20,17 @@
 		479421F4212EA50C00425A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 479421F2212EA50C00425A37 /* Main.storyboard */; };
 		479421F6212EA50C00425A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 479421F5212EA50C00425A37 /* Assets.xcassets */; };
 		47942201212EE44200425A37 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47942200212EE44200425A37 /* SearchResult.swift */; };
-		47F2EFB5212EF851008148FC /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F2EFB4212EF851008148FC /* SearchResultCell.xib */; };
 		47F2EFB7212FE626008148FC /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F2EFB6212FE626008148FC /* SearchResultCell.swift */; };
-		47F2EFB9212FF411008148FC /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47F2EFB8212FF411008148FC /* NothingFoundCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4711165A2136779A00878A64 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		475974372131722B002F9AC5 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		4711165F2137DD3200878A64 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		471116612137DE3800878A64 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
+		471116632137E09F00878A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LoadingCell.xib; sourceTree = "<group>"; };
+		471116662137E0E400878A64 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/LoadingCell.strings; sourceTree = "<group>"; };
+		471116682137E2C100878A64 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Main.strings; sourceTree = "<group>"; };
+		4711166A2137E46500878A64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SearchResultCell.xib; sourceTree = "<group>"; };
 		475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
 		475BD670213413B80087839B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		475BD6722134197E0087839B /* DimmingPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
@@ -37,9 +42,7 @@
 		479421F5212EA50C00425A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		479421FA212EA50C00425A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47942200212EE44200425A37 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		47F2EFB4212EF851008148FC /* SearchResultCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		47F2EFB6212FE626008148FC /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
-		47F2EFB8212FF411008148FC /* NothingFoundCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,13 +80,13 @@
 				475BD670213413B80087839B /* DetailViewController.swift */,
 				475BD6782135448D0087839B /* LandscapeViewController.swift */,
 				479421FA212EA50C00425A37 /* Info.plist */,
-				475974372131722B002F9AC5 /* LoadingCell.xib */,
+				471116642137E09F00878A64 /* LoadingCell.xib */,
 				479421F2212EA50C00425A37 /* Main.storyboard */,
 				475BD6722134197E0087839B /* DimmingPresentationController.swift */,
-				47F2EFB8212FF411008148FC /* NothingFoundCell.xib */,
+				471116602137DD3200878A64 /* NothingFoundCell.xib */,
 				47942200212EE44200425A37 /* SearchResult.swift */,
 				47F2EFB6212FE626008148FC /* SearchResultCell.swift */,
-				47F2EFB4212EF851008148FC /* SearchResultCell.xib */,
+				4711166B2137E46500878A64 /* SearchResultCell.xib */,
 				479421F0212EA50C00425A37 /* SearchViewController.swift */,
 				4711165A2136779A00878A64 /* Search.swift */,
 				475BD66E2133F2150087839B /* UIImageView+DownloadImage.swift */,
@@ -133,6 +136,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
 			);
 			mainGroup = 479421E2212EA50C00425A37;
 			productRefGroup = 479421EC212EA50C00425A37 /* Products */;
@@ -150,9 +154,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				479421F6212EA50C00425A37 /* Assets.xcassets in Resources */,
-				475974382131722B002F9AC5 /* LoadingCell.xib in Resources */,
-				47F2EFB5212EF851008148FC /* SearchResultCell.xib in Resources */,
-				47F2EFB9212FF411008148FC /* NothingFoundCell.xib in Resources */,
+				471116622137E09F00878A64 /* LoadingCell.xib in Resources */,
+				471116692137E46500878A64 /* SearchResultCell.xib in Resources */,
+				4711165E2137DD3200878A64 /* NothingFoundCell.xib in Resources */,
 				479421F4212EA50C00425A37 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,10 +183,37 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		471116602137DD3200878A64 /* NothingFoundCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4711165F2137DD3200878A64 /* en */,
+				471116612137DE3800878A64 /* nl */,
+			);
+			name = NothingFoundCell.xib;
+			sourceTree = "<group>";
+		};
+		471116642137E09F00878A64 /* LoadingCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				471116632137E09F00878A64 /* Base */,
+				471116662137E0E400878A64 /* nl */,
+			);
+			name = LoadingCell.xib;
+			sourceTree = "<group>";
+		};
+		4711166B2137E46500878A64 /* SearchResultCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4711166A2137E46500878A64 /* Base */,
+			);
+			name = SearchResultCell.xib;
+			sourceTree = "<group>";
+		};
 		479421F2212EA50C00425A37 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				479421F3212EA50C00425A37 /* Base */,
+				471116682137E2C100878A64 /* nl */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -194,6 +225,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -254,6 +286,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
