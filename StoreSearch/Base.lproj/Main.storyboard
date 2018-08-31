@@ -329,10 +329,10 @@
             </objects>
             <point key="canvasLocation" x="1888" y="-297"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="RHi-Kr-ZqC">
             <objects>
-                <tableViewController id="jJl-8F-mba" sceneMemberID="viewController">
+                <tableViewController id="jJl-8F-mba" customClass="MenuViewController" customModule="StoreSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="XxD-Kr-vqm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

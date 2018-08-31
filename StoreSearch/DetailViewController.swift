@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 class DetailViewController: UIViewController {
     var searchResult: SearchResult! {
@@ -27,7 +28,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var priceButton: UIButton!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.tintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 1)
@@ -57,7 +57,7 @@ class DetailViewController: UIViewController {
         modalPresentationStyle = .custom
         transitioningDelegate = self
     }
-     
+    
     deinit {
         print("deinit \(self)")
         downloadTask?.cancel()
@@ -68,7 +68,7 @@ class DetailViewController: UIViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
-
+    
     @IBAction func close() {
         dismiss(animated: true, completion: nil)
     }
@@ -114,6 +114,14 @@ class DetailViewController: UIViewController {
             })
         }
     }
+    
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowMenu" {
+            let controller = segue.destination as! MenuViewController
+            controller.delegate = self
+        }
+    }
 }
 
 extension DetailViewController: UIViewControllerTransitioningDelegate {
@@ -127,3 +135,27 @@ extension DetailViewController: UIGestureRecognizerDelegate {
         return (touch.view === self.view)
     }
 }
+
+extension DetailViewController: MenuViewControllerDelegate {
+    func menuViewControllerSendMail(_ controller: MenuViewController) {
+        dismiss(animated: true) {
+            if MFMailComposeViewController.canSendMail() {
+                let controller = MFMailComposeViewController()
+                controller.mailComposeDelegate = self
+                controller.setSubject(NSLocalizedString("Support Request", comment: "E-mail subject"))
+                controller.setToRecipients(["your@email-address-here.com"])
+                controller.modalPresentationStyle = .formSheet
+                self.present(controller, animated: true, completion: nil)
+            }
+        }
+    }
+}
+
+extension DetailViewController: MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+
+

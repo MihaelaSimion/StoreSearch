@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4704AD7221392143007CB524 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4704AD7121392142007CB524 /* MenuViewController.swift */; };
 		4711165B2136779A00878A64 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4711165A2136779A00878A64 /* Search.swift */; };
 		4711165E2137DD3200878A64 /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471116602137DD3200878A64 /* NothingFoundCell.xib */; };
 		471116622137E09F00878A64 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471116642137E09F00878A64 /* LoadingCell.xib */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4704AD7121392142007CB524 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		4711165A2136779A00878A64 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		4711165F2137DD3200878A64 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
 		471116612137DE3800878A64 /* nl */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = nl; path = nl.lproj/NothingFoundCell.xib; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				471116642137E09F00878A64 /* LoadingCell.xib */,
 				471116702137EA9600878A64 /* Localizable.strings */,
 				479421F2212EA50C00425A37 /* Main.storyboard */,
+				4704AD7121392142007CB524 /* MenuViewController.swift */,
 				471116602137DD3200878A64 /* NothingFoundCell.xib */,
 				4711165A2136779A00878A64 /* Search.swift */,
 				47942200212EE44200425A37 /* SearchResult.swift */,
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4711165B2136779A00878A64 /* Search.swift in Sources */,
+				4704AD7221392143007CB524 /* MenuViewController.swift in Sources */,
 				479421F1212EA50C00425A37 /* SearchViewController.swift in Sources */,
 				475BD6732134197E0087839B /* DimmingPresentationController.swift in Sources */,
 				475BD6792135448D0087839B /* LandscapeViewController.swift in Sources */,
